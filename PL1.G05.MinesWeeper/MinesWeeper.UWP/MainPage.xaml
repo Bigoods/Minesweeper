@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="MinesWeeper.UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MinesWeeper.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    MinHeight="720" MinWidth="1280"
+    MaxHeight="1080" MaxWidth="1920">
+
+
+    <Grid HorizontalAlignment="Center" MinWidth="1280" MinHeight="720">
+        <!--Image x:Name="myface" Source="ms-appx:///Resources/face.png"/-->
+        <Grid Margin="1,0,-1,0" Height="207" VerticalAlignment="Top">
+            <Button x:Name="Button_facil" Width="100" VerticalAlignment="Top" Content="Facil" Margin="0,97,0,0" Click="Buttonfacil_Click" HorizontalAlignment="Center" Height="30" />
+            <Button x:Name="Button_medio" Width="100" Content="Medio" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,132,0,0" Click="Buttonmedio_Click" Height="30"/>
+            <Button x:Name="Button_sair" Content="Sair" Margin="0,20,142,0" VerticalAlignment="Top" HorizontalAlignment="Right" Click="Buttonsair_Click" Width="64" Height="32"/>
+            <TextBox x:Name="Temporizador" Margin="160,20,0,0" Text="00:00" TextAlignment="Center" TextWrapping="Wrap" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="64"/>
+            <TextBox x:Name="Pontos" HorizontalAlignment="Left" Margin="160,59,0,0" Text="0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBox x:Name="Minas" Margin="0,59,142,0" Text="0" TextAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Right" Width="64" Height="32" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="67,27,0,0" Text="Temporizador:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Right" Margin="0,66,211,0" Text="Minas:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="110,66,0,0" Text="Pontos:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Button VerticalAlignment="Top" Margin="0,21,0,0" Click="FaceButton_Click" Width="55" ManipulationMode="System" HorizontalAlignment="Center" Height="55">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/face.jpg" Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+        <Grid x:Name="gameGrid"
+              Margin="211,0,209,78" Width="1500" Height="790" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Page>
